@@ -117,7 +117,7 @@ def folly_library(
         "folly/experimental/crypto/detail/MathOperation_Simple.cpp",
         "folly/experimental/crypto/detail/MathOperation_SSE2.cpp",
         "folly/experimental/crypto/LtHash.cpp",
-    ]
+    ] + native.glob(["folly/experimental/exception_tracer/**/*.cpp"])
 
     if with_libaio == 0:
         hdrs_excludes = hdrs_excludes + [
